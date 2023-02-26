@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block head %}
+<title>Trajectory Clustering</title>
+{% endblock %} {% block body %}
+<div class="content" id="page_title">
+  <h1>Trajectory Clustering</h1>
+</div>
+<div>
+  <html>
+    <head></head>
+    <body>
+      <h3>All Trajectories</h3>
+      {{ iframe|safe }}
+    </body>
+  </html>
+</div>
+{% for grp in grouped_traj %}
+<div>
+  <html>
+    <head></head>
+    <body>
+      <h3>Trajectory Cluster</h3>
+      {{ grp|safe }}
+    </body>
+  </html>
+</div>
+{% endfor %} {% endblock %}
